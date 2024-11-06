@@ -8,33 +8,69 @@
     <!-- Page Title -->
     <title>High-Energy Physics Theory Citation Analysis</title>
     
-    <!-- Embedded CSS for styling textboxes and images -->
+    <!-- Embedded CSS for improved styling of textboxes, code, and images -->
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-        }
-        h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
             color: #333;
         }
-        .textbox {
+        h1, h2, h3 {
+            color: #2a3f5f;
+        }
+        header, section, footer {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+        p, ul {
+            margin: 10px 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .textbox, .image-box {
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 15px;
             background-color: #f9f9f9;
+            border-radius: 8px;
             margin: 20px 0;
-            overflow: auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .textbox h3, .image-box h3 {
+            margin-top: 0;
+            color: #2a3f5f;
         }
         pre {
             background-color: #f4f4f4;
             padding: 15px;
             border-radius: 5px;
             overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
         }
         img {
+            display: block;
             max-width: 100%;
             height: auto;
             margin: 10px 0;
             border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            text-align: center;
+            color: #555;
         }
     </style>
 </head>
@@ -61,6 +97,7 @@
         
         <!-- Code Block as a Textbox -->
         <div class="textbox">
+            <h3>Code for Loading Data</h3>
             <pre><code>
 import networkx as nx
 import pandas as pd
@@ -137,14 +174,16 @@ print(f"Number of citations (edges): {citation_graph.number_of_edges()}")
         <p>To make our findings visually engaging, we create various plots and graphs:</p>
         
         <!-- Degree Centrality Visualization Image -->
-        <div class="textbox">
-            <p><strong>Degree Centrality Visualization:</strong> Visualizing the top 100 most-cited papers.</p>
+        <div class="image-box">
+            <h3>Degree Centrality Visualization</h3>
+            <p>Visualizing the top 100 most-cited papers.</p>
             <img src="images/degree_centrality.png" alt="Degree Centrality Visualization">
         </div>
         
         <!-- PageRank Visualization Image -->
-        <div class="textbox">
-            <p><strong>PageRank Visualization:</strong> Showing the top papers based on PageRank scores.</p>
+        <div class="image-box">
+            <h3>PageRank Visualization</h3>
+            <p>Showing the top papers based on PageRank scores.</p>
             <img src="images/pagerank.png" alt="PageRank Visualization">
         </div>
     </section>
